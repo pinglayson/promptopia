@@ -7,11 +7,11 @@ import Form from "@components/Form";
 import { get } from "mongoose";
 // import { useSession } from "next-auth/react";
 
-const EditPrompt = () => {
+const EditPrompt = ({ params }) => {
   const router = useRouter();
   //   const { data: session } = useSession();
-  const searchParams = useSearchParams();
-  const promptId = searchParams.get("id");
+  // const searchParams = useSearchParams();
+  const promptId = params.id;
 
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
