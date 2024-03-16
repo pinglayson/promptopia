@@ -12,6 +12,10 @@ const nextConfig = {
       ...config.experiments,
       topLevelAwait: true,
     };
+    config.resolve.fallback = {
+      "mongodb-client-encryption": false,
+      aws4: false,
+    };
     return config;
   },
 };
